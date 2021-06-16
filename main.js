@@ -28,8 +28,8 @@ const imgdata = (value) => {
 
 const getData = async () => {
     let value = sbox.value;
-    let url = 'http://openweathermap.org/img/wn/';
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${apikey}&units=metric`;
+    let url = 'https://openweathermap.org/img/wn/';
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=${apikey}&units=metric`;
     let res = await fetch(api);
     let data = await res.json();
     if (data["cod"] == '404') {
